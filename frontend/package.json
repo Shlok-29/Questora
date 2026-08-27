@@ -1,0 +1,47 @@
+{
+  "name": "luxe-travel-ecosystem",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@tanstack/react-query": "^5.8.4",
+    "axios": "^1.16.0",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.294.0",
+    "mongodb": "^7.2.0",
+    "razorpay": "^2.9.2",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.24.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-intersection-observer": "^9.5.3",
+    "react-router-dom": "^6.20.0",
+    "weekendwander-monorepo": "file:..",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "react-scripts": "5.0.1",
+    "tailwindcss": "^3.3.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "npm start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

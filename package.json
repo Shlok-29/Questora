@@ -1,0 +1,14 @@
+{
+  "name": "weekendwander-monorepo",
+  "version": "1.0.0",
+  "description": "WeekendWander MERN monorepo",
+  "scripts": {
+    "start": "npm run start --prefix frontend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run start --prefix frontend",
+    "dev": "npx concurrently \"npm run dev --prefix backend\" \"npm run start --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
