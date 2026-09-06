@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../config";
 import { 
   Home, 
   Compass, 
@@ -209,8 +210,7 @@ export default function HostsAndGuidesPage() {
   const fetchListings = async () => {
     setLoading(true);
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-      const res = await axios.get(`${apiUrl}/listings`);
+      const res = await axios.get(`${API_BASE_URL}/listings`);
       if (res.data && res.data.length > 0) {
         setListings(res.data);
       } else {
@@ -314,8 +314,7 @@ export default function HostsAndGuidesPage() {
     formImages.forEach((img) => data.append("images", img));
 
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-      const res = await axios.post(`${apiUrl}/listings`, data);
+      const res = await axios.post(`${API_BASE_URL}/listings`, data);
       
       const newListing = res.data._id ? res.data : {
         _id: `partner-${Date.now()}`,

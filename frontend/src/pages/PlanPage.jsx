@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useTripStore from "../store/tripStore";
 import { DESTINATIONS, MOCK_ACTIVITIES, fetchWeather } from "../lib/api";
+import { API_BASE_URL } from "../config";
 import { ArrowLeft, ChevronDown, ChevronUp, Plus, Minus, Check, CheckCircle2, X } from "lucide-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -26,7 +27,7 @@ function CustomCalendar({ dateRange, setDateRange, weather, destinationId }) {
       try {
         const startStr = startDate.toISOString();
         const endStr = endDate.toISOString();
-        const res = await fetch(`http://localhost:5000/api/availability?destinationId=${destinationId}&start=${startStr}&end=${endStr}`);
+        const res = await fetch(`${API_BASE_URL}/availability?destinationId=${destinationId}&start=${startStr}&end=${endStr}`);
         const data = await res.json();
         if (data.dailyTotals) {
           setAvailabilityData(data.dailyTotals);

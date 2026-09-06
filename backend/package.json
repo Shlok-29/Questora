@@ -20,8 +20,7 @@
     "multer": "^2.1.1",
     "multer-storage-cloudinary": "^4.0.0",
     "razorpay": "^2.9.6",
-    "twilio": "^6.0.2",
-    "weekendwander-monorepo": "file:.."
+    "twilio": "^6.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

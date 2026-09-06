@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../config";
 import {
   X,
   CheckCircle,
@@ -138,10 +139,9 @@ export default function ListingModal({ isOpen, onClose }) {
     images.forEach((image) => data.append("images", image));
 
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
       // Note: Do not set Content-Type header manually when sending FormData. 
       // Axios/Browser will set it automatically with the correct boundary.
-      await axios.post(`${apiUrl}/listings`, data);
+      await axios.post(`${API_BASE_URL}/listings`, data);
 
       setSuccess(true);
       toast.success("Property listed successfully!");

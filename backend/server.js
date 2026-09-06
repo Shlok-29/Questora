@@ -143,11 +143,9 @@ app.get('/api/availability', async (req, res) => {
 });
 
 // 8. Start Server
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server is flying on port ${PORT}`);
-    console.log(`📡 API Base URL: http://localhost:${PORT}/api`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`🚀 Server is flying on port ${PORT}`);
+  console.log(`📡 API Base URL: http://localhost:${PORT}/api`);
+});
 
 module.exports = app;
